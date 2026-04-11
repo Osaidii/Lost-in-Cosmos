@@ -19,11 +19,9 @@ func _on_cutscenes_animation_finished(anim_name: StringName) -> void:
 func _on_exit_pressed() -> void:
 	Shortcuts.game_over = false
 	Shortcuts.coins = 0
-	Shortcuts.no_tutorial = false
 	get_tree().change_scene_to_packed(MAIN_MENU)
 
 func _on_replay_pressed() -> void:
 	Shortcuts.game_over = false
 	Shortcuts.coins = 0
-	Shortcuts.no_tutorial = false
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_packed(WORLD)

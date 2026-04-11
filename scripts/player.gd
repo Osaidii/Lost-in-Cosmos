@@ -8,7 +8,6 @@ extends CharacterBody2D
 @onready var shoot_cooldown: Timer = $"Shoot Cooldown"
 @onready var collision: CollisionShape2D = $Collision
 @onready var root := get_tree().current_scene
-@onready var tutorial: Label = $"../UI/Tutorial"
 @onready var coin: AudioStreamPlayer2D = $Coin
 @onready var laser_sound: AudioStreamPlayer2D = $Laser
 @onready var explosion_sound: AudioStreamPlayer2D = $Explosion
@@ -17,10 +16,8 @@ extends CharacterBody2D
 @onready var heart_3: AnimatedSprite2D = $"../UI/Hearts/Heart 3"
 @onready var screens: CanvasLayer = $"../Screens"
 @onready var lose_screen: MarginContainer = $"../Screens/Lose Screen"
-@onready var exit: TextureButton = $"../Screens/Exit"
-@onready var replay: TextureButton = $"../Screens/Replay"
 
-@export var speed := 150
+@export var speed := 180
 @export var COOLDOWN := 0.1
 @export_category("External")
 @export var direction: Vector2
@@ -29,7 +26,6 @@ var stored_coins := 0
 var is_alive := true
 var can_shoot := true
 var can_move := true
-var player_shot_or_moved := false
 
 func _ready() -> void:
 	# Set Cooldown
@@ -56,13 +52,8 @@ func _physics_process(delta: float) -> void:
 	# Look at Mouse
 	look_at(mouse_position)
 	
-	# Win Conditions
-	if stored_coins >= 500:
-		Shortcuts.game_over = true
-	
 	# Shoot
 	if Input.is_action_pressed("RMB") and can_shoot:
-		player_shot_or_moved = true
 		shoot()
 	
 	# Store Positon Globaly
@@ -76,12 +67,10 @@ func _physics_process(delta: float) -> void:
 	
 	# Update Stored Values
 	Shortcuts.coins = stored_coins
-	Shortcuts.no_tutorial = player_shot_or_moved
 	
 	# Movement
 	direction = Vector2.ZERO
 	if Input.is_action_pressed("LMB") and can_move:
-		player_shot_or_moved = true
 		direction = (mouse_position - global_position).normalized()
 		var target_velocity = direction * speed
 		velocity = lerp(velocity, target_velocity, delta * 2.0)
@@ -101,6 +90,7 @@ func shoot() -> void:
 	instance.spawn_position = global_position
 	instance.spawn_rotation = rotation
 	root.add_child.call_deferred(instance)
+	instance.collision_layer = 3
 	instance.z_index = z_index - 1
 	laser_sound.play()
 	shoot_cooldown.start()
@@ -131,15 +121,12 @@ func die() -> void:
 		get_tree().reload_current_scene()
 	else:
 		lose_screen.visible = true
-		exit.visible = true
-		replay.visible = true
 	self.queue_free()
 
 func _on_nearby_body_entered(body: Node2D) -> void:
 	# Tell Enemy is Nearby
 	if body is Enemy:
 		body.nearby = true
-		print(body.nearby)
 
 func _on_facing_body_entered(body: Node2D) -> void:
 	if body is Enemy:

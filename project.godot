@@ -29,8 +29,10 @@ Shortcuts="*uid://kvyp2lol4lym"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/size/resizable=false
 window/size/borderless=true
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -67,4 +69,5 @@ RMB={
 
 textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0.0627451, 1)

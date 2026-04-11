@@ -27,9 +27,9 @@ func _on_pause_pressed() -> void:
 	animation.play("on")
 
 func _on_replay_pressed() -> void:
-	get_tree().change_scene_to_packed(MAIN_MENU)
 	get_tree().paused = false
 	paused = false
+	get_tree().change_scene_to_packed(MAIN_MENU)
 
 func _on_sound_pressed() -> void:
 	sound_enabled.visible = true

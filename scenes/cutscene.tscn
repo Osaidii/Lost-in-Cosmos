@@ -4,6 +4,8 @@
 [ext_resource type="FontFile" uid="uid://bocb13hcj1xll" path="res://assets/kenney mini square uheartbeast github.com.ttf" id="5_loviu"]
 [ext_resource type="Texture2D" uid="uid://cjoi2oud5v7yy" path="res://assets/bg uheartbeast github.com.png" id="6_o5jtv"]
 [ext_resource type="Texture2D" uid="uid://crm22qr3udhwt" path="res://assets/far stars bg uheartbeast github.com.png" id="7_l5lt3"]
+[ext_resource type="Texture2D" uid="uid://daduo4gx83pyn" path="res://assets/radio.png" id="7_mu2gi"]
+[ext_resource type="Texture2D" uid="uid://bd6ogg76dim1p" path="res://assets/coin.png" id="8_c7dhu"]
 [ext_resource type="Texture2D" uid="uid://d0a6b8d1mcksc" path="res://assets/close stars bg uheartbeast github.com.png" id="8_vvyho"]
 [ext_resource type="Texture2D" uid="uid://eecn0m6uy3rr" path="res://assets/player uheartbeast github.com.png" id="9_v50sc"]
 [ext_resource type="PackedScene" uid="uid://dnt6swa812ck8" path="res://scenes/camera.tscn" id="10_b8ocl"]
@@ -945,7 +947,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.0]
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -957,7 +959,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.0]
+"values": [0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -969,7 +971,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.0]
+"values": [0.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -983,9 +985,202 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene/4:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cutscene/5:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Screens/Win Screen:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Cutscene/Radio:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(821, 468)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Cutscene/Radio:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Cutscene/Radio:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cutscene/Coin:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(799, 488)]
+}
 
 [sub_resource type="Animation" id="Animation_m2h23"]
 resource_name = "ending"
+length = 18.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/Player Msg:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/Planet Msg:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8, 13),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene/4:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 2.1666667, 5.866667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene/5:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.333334, 8.033334, 9.766666, 12.666667, 12.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Screens/Win Screen:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene/Radio:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(11.833333, 14.897439),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(821, 468), Vector2(189, 534)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cutscene/Radio:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(14.533333, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cutscene/Radio:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(14.3, 14.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.89, 1.89), Vector2(0.5, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Cutscene/Coin:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(3.7625976, 5.9650936),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(172, 538), Vector2(799, 488)]
+}
 
 [sub_resource type="Animation" id="Animation_er82a"]
 resource_name = "scene"
@@ -1066,6 +1261,7 @@ scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="Layer 1" type="ParallaxLayer" parent="Background" unique_id=1515326135]
+position = Vector2(-417.5, 0)
 motion_scale = Vector2(0.25, 0.25)
 motion_mirroring = Vector2(128, 128)
 
@@ -1100,7 +1296,7 @@ position = Vector2(256, 192)
 texture = ExtResource("6_o5jtv")
 
 [node name="Layer 2" type="ParallaxLayer" parent="Background" unique_id=77443586]
-position = Vector2(0, 64)
+position = Vector2(-417.5, 64)
 motion_scale = Vector2(0.45, 0.45)
 motion_mirroring = Vector2(128, 128)
 
@@ -1135,7 +1331,7 @@ position = Vector2(256, 64)
 texture = ExtResource("7_l5lt3")
 
 [node name="Layer 3" type="ParallaxLayer" parent="Background" unique_id=1278099756]
-position = Vector2(0, 64)
+position = Vector2(-417.5, 64)
 motion_scale = Vector2(0.9, 0.9)
 motion_mirroring = Vector2(128, 128)
 
@@ -1204,6 +1400,20 @@ position = Vector2(635.99994, 204)
 scale = Vector2(0.5204991, 0.5204991)
 texture = ExtResource("18_40a5i")
 
+[node name="Radio" type="Sprite2D" parent="Cutscene" unique_id=820183955]
+z_index = -1
+position = Vector2(821, 468)
+scale = Vector2(2, 2)
+texture = ExtResource("7_mu2gi")
+
+[node name="Coin" type="Sprite2D" parent="Cutscene" unique_id=1177064382]
+z_index = -1
+position = Vector2(799, 488)
+scale = Vector2(3.115, 3.115)
+texture = ExtResource("8_c7dhu")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
 [node name="1" type="Label" parent="Cutscene" unique_id=269931358]
 layout_mode = 0
 offset_left = 280.0
@@ -1217,6 +1427,8 @@ Broken, Can You
 Help Me?"
 horizontal_alignment = 1
 vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="2" type="Label" parent="Cutscene" unique_id=1104126558]
 layout_mode = 0
@@ -1227,10 +1439,12 @@ offset_bottom = 258.0
 theme_override_fonts/font = ExtResource("5_loviu")
 theme_override_font_sizes/font_size = 33
 text = "YES, BUT IT WILL
-COST YOU 500
+COST YOU 250
 COINS"
 horizontal_alignment = 1
 vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="3" type="Label" parent="Cutscene" unique_id=91586421]
 layout_mode = 0
@@ -1245,6 +1459,37 @@ Back after
 collecting them"
 horizontal_alignment = 1
 vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="4" type="Label" parent="Cutscene" unique_id=979930023]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 262.0
+offset_right = 817.0
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("5_loviu")
+theme_override_font_sizes/font_size = 33
+text = "HERE YOU GO"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="5" type="Label" parent="Cutscene" unique_id=2070234504]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 108.0
+offset_right = 987.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("5_loviu")
+theme_override_font_sizes/font_size = 33
+text = "THANKS, 
+TAKE THIS"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Cutscenes" type="AnimationPlayer" parent="." unique_id=996172913]
 libraries/ = SubResource("AnimationLibrary_40a5i")

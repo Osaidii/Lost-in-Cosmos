@@ -11,7 +11,7 @@ extends CharacterBody2D
 @onready var laser_sound: AudioStreamPlayer2D = $Laser
 @onready var explosion: AudioStreamPlayer2D = $Explosion
 
-var speed := 150
+var speed := 130
 @export var COOLDOWN := 0.25
 
 var is_alive := true
@@ -32,6 +32,8 @@ func _physics_process(delta: float) -> void:
 			# Stop chasing
 			if can_shoot:
 				shoot()
+			await get_tree().create_timer(1).timeout
+			look_at(Shortcuts.player_pos)
 			
 			if player_is_facing:
 				dodge()
@@ -80,6 +82,7 @@ func shoot() -> void:
 	instance.spawn_position = global_position
 	instance.spawn_rotation = rotation
 	instance.z_index = z_index - 1
+	instance.collision_layer = 4
 	root.add_child.call_deferred(instance)
 	shoot_cooldown.start()
 	laser_sound.play()
