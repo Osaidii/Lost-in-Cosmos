@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://l40br8bywevb"
+path="res://.godot/imported/hit sound uheartbeast github.com.wav-a9850f88b9566e1f1bafbf5b4be2735c.sample"
+
+[deps]
+
+source_file="res://base-assets/hit sound uheartbeast github.com.wav"
+dest_files=["res://.godot/imported/hit sound uheartbeast github.com.wav-a9850f88b9566e1f1bafbf5b4be2735c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

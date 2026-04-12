@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds7mumc017e33"
+path="res://.godot/imported/laser sound uheartbeast github.com.wav-a1db1803b0259d77ab7577fbc0883054.sample"
+
+[deps]
+
+source_file="res://base-assets/laser sound uheartbeast github.com.wav"
+dest_files=["res://.godot/imported/laser sound uheartbeast github.com.wav-a1db1803b0259d77ab7577fbc0883054.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
